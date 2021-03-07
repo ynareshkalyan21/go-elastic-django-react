@@ -27,7 +27,7 @@ class Order(models.Model):
     # dataSource = models.ForeignKey(DataSource, on_delete=models.CASCADE)
     instrumentId = models.CharField(max_length=100)
     instrumentName = models.CharField(max_length=100)
-    orderId = models.CharField(max_length=100)
+    orderId = models.CharField(max_length=100,unique=True)
     TYPES = [
         (1, 'BUY'),
         (2, 'SELL'),

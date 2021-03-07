@@ -2,7 +2,7 @@ from django_elasticsearch_dsl import fields
 from django_elasticsearch_dsl import Document
 from django_elasticsearch_dsl.registries import registry
 # fromm elasticsearch_dsl import Index
-
+from GoElastic.settings import ELASTICSEARCH_INDEX_NAME
 from orderManagement.models import Order
 
 # order_index = Index('order')
@@ -52,7 +52,7 @@ class OrderDocument(Document):
 
     class Index:
         # Name of the Elasticsearch index
-        name = 'order'
+        name = ELASTICSEARCH_INDEX_NAME
         # See Elasticsearch Indices API reference for available settings
         settings = {'number_of_shards': 1,
                     'number_of_replicas': 0}

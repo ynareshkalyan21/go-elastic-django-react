@@ -131,6 +131,7 @@ ELASTICSEARCH_DSL={
     },
 }
 
+ELASTICSEARCH_INDEX_NAME = "order"
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000'
 ]
